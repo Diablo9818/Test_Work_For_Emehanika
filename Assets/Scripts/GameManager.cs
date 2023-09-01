@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject _gameBeginPanel;
     [SerializeField] private Button _startButton;
+    [SerializeField] private Slider slider;
 
     private int _score;
     public bool isGameActive;
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         _gameOverText.text = "    Game Over. \r\n  You Score is " + _score;
         _gameOverText.gameObject.SetActive(true);
         _scoreText.gameObject.SetActive(false);
+        slider.gameObject.SetActive(false);
      }
 
     public void StartGame()
